@@ -1,0 +1,78 @@
+{
+  "name": "GPT VScode Assistant",
+  "displayName": "GPT VScode Assistant",
+  "description": "uses gpt chat to provide function commenting and code generation, and its free!",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.79.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "GptVScodeAssistant.ask",
+        "title": "Ask GPT"
+      },
+      {
+        "command": "GptVScodeAssistant.generate",
+        "title": "Ask GPT to Generate Code"
+      },
+      {
+        "command": "GptVScodeAssistant.improve",
+        "title": "Ask GPT to Process Code"
+      },
+      {
+        "command": "GptVScodeAssistant.document",
+        "title": "GPT Document the Code"
+      }
+    ],
+    "configuration": {
+      "title": "Gpt VScode Assistant",
+      "properties": {
+        "GptVScodeAssistant.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Defines the OpenAI app API key. you can get it at https://platform.openai.com/account/api-keys"
+        },
+        "GptVScodeAssistant.documentMessage": {
+          "type": "string",
+          "default": "write this code in md code block but with documentation",
+          "description": "Defines the request to gpt after which the selected code already goes."
+        },
+        "GptVScodeAssistant.modelName": {
+          "type": "string",
+          "default": "gpt-3.5-turbo",
+          "description": "Defines the model version to use in gpt api request."
+        },
+        "GptVScodeAssistant.systemPrompt": {
+          "type": "string",
+          "default": "You are a helpful assistant.",
+          "description": "Defines a system prompt to use in gpt api request."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "20.2.5",
+    "@types/vscode": "^1.79.0",
+    "@vscode/test-electron": "^2.3.2",
+    "eslint": "^8.41.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.3"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.11"
+  }
+}
