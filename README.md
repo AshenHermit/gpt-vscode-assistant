@@ -8,6 +8,9 @@ This extension uses gpt chat to provide simple code generation and documentation
 * Process Code
 * Document the code
 
+## Installation
+Download the last `.vsix` release: [gpt-vscode-assistant-0.7.0.vsix](https://github.com/AshenHermit/gpt-vscode-assistant/releases/tag/0.7.0)
+
 ## How it works
 
 This thing is so fucking complex, i don't even know if I can describe how it works.  
