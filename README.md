@@ -1,6 +1,6 @@
 # GPT VScode Assistant
 
-This extension uses gpt chat to provide simple function documentation and code generation, and its free!
+This extension uses gpt chat to provide simple code generation and documentation, and its free!
 
 ## Features
 * Ask GPT a question
